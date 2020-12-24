@@ -31,4 +31,4 @@ give multiple links and makes the task much more easier.
 
 It consist of the function that compares the keywords occurence in a particular document with it's occurence in the remaining documents one by one to generate the Similarity Matrix of each keywords. 
 
-<img src="https://github.com/nikkas27/Question-Answering-System-for-Webpages-content-Analysis/blob/main/Similarity Matrix.jpg" width="90%"></img> 
+<img src="https://github.com/nikkas27/Question-Answering-System-for-Webpages-content-Analysis/blob/main/Similarity Matrix.png" width="90%"></img> 
