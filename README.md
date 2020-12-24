@@ -15,6 +15,20 @@ From these documents, the user needs to find the following words count for each 
 For searching the frequency of each word from each documents, I have created a function with takes the website link that we need to crawl through. Creating the function helps to
 give multiple links and makes the task much more easier.
 
+<img src="https://github.com/nikkas27/Question-Answering-System-for-Webpages-content-Analysis/blob/main/SS1.jpg" width="90%"></img> 
+
+<img src="https://github.com/nikkas27/Question-Answering-System-for-Webpages-content-Analysis/blob/main/SS2.jpg" width="90%"></img> 
+
+<img src="https://github.com/nikkas27/Question-Answering-System-for-Webpages-content-Analysis/blob/main/SS3.jpg" width="90%"></img> 
+
+<img src="https://github.com/nikkas27/Question-Answering-System-for-Webpages-content-Analysis/blob/main/SS4.jpg" width="90%"></img> 
+
+<img src="https://github.com/nikkas27/Question-Answering-System-for-Webpages-content-Analysis/blob/main/SS5.jpg" width="90%"></img> 
+
+<img src="https://github.com/nikkas27/Question-Answering-System-for-Webpages-content-Analysis/blob/main/SS6.jpg" width="90%"></img> 
+
 # documentSimilarity.py
 
 It consist of the function that compares the keywords occurence in a particular document with it's occurence in the remaining documents one by one to generate the Similarity Matrix of each keywords. 
+
+<img src="https://github.com/nikkas27/Question-Answering-System-for-Webpages-content-Analysis/blob/main/Similarity Matrix.jpg" width="90%"></img> 
