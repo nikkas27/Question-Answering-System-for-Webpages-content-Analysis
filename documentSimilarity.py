@@ -5,7 +5,6 @@ import urllib.request
 from math import *
 from sklearn import preprocessing
 
-
 i,j=1,0;
 n=[]
 fullcontnt=[]
@@ -24,23 +23,23 @@ def cosine(list1, list2):
         mod_x[i] = list1[i] * list1[i]
         mod_y[i] = list2[i] * list2[i]
 
-    # print(prod)
-    # print(mod_x)
-    # print(mod_y)
+    print(prod)
+    print(mod_x)
+    print(mod_y)
 
     dot_prod = sum(prod)
     mod_sum_x = sum(mod_x)
     mod_sum_y = sum(mod_y)
 
-    # print(mod_sum_x)
-    # print(mod_sum_y)
-    # print(dot_prod)
+    print(mod_sum_x)
+    print(mod_sum_y)
+    print(dot_prod)
 
     sqrt_mod_x = sqrt(mod_sum_x)
     sqrt_mod_y = sqrt(mod_sum_y)
 
-    # print(sqrt_mod_x)
-    # print(sqrt_mod_y)
+    print(sqrt_mod_x)
+    print(sqrt_mod_y)
 
     denominator = sqrt_mod_x * sqrt_mod_y
 
@@ -98,48 +97,36 @@ def webcrwal(link):
 
     CSV = [engineer_count, research_count, data_count,mining_count, datamining_count, ml_count]
 
-    # with open("count.csv", "a") as file:
-    #     wr = csv.writer(file, dialect='excel')
-    #     wr.writerow(CSV)
-    #     print("Successfully added!!")
+    with open("count.csv", "a") as file:
+        wr = csv.writer(file, dialect='excel')
+        wr.writerow(CSV)
+        print("Successfully added!!")
+
+if __name__ == '__main__': 
+    webcrwal("http://cis.csuohio.edu/~sschung/")
+    print("----------------------------------------Crawling Next document.......------------------------------------")
+    webcrwal("https://en.wikipedia.org/wiki/Engineering")
+    print("----------------------------------------Crawling Next document.......------------------------------------")
+    webcrwal("http://my.clevelandclinic.org/research")
+    print("----------------------------------------Crawling Next document.......------------------------------------")
+    webcrwal("https://en.wikipedia.org/wiki/Data_mining")
+    print("----------------------------------------Crawling Next document.......------------------------------------")
+    webcrwal("https://en.wikipedia.org/wiki/Data_mining#Data_mining")
+
+    word_count = pd.read_csv("F:/count.csv")
+    words = word_count.drop(columns=['data','mining'])
+    print(words)
+    print(words.columns)
 
 
-webcrwal("http://cis.csuohio.edu/~sschung/")
-print("----------------------------------------Crawling Next document.......------------------------------------")
-webcrwal("https://en.wikipedia.org/wiki/Engineering")
-print("----------------------------------------Crawling Next document.......------------------------------------")
-webcrwal("http://my.clevelandclinic.org/research")
-print("----------------------------------------Crawling Next document.......------------------------------------")
-webcrwal("https://en.wikipedia.org/wiki/Data_mining")
-print("----------------------------------------Crawling Next document.......------------------------------------")
-webcrwal("https://en.wikipedia.org/wiki/Data_mining#Data_mining")
+    # Normalize the data attributes for the Iris dataset.
+    normalized_X = preprocessing.normalize(words)
 
+    print(normalized_X)
+    print(normalized_X[1,:])
 
-
-word_count = pd.read_csv("F:/Cleveland State University/Fall 19/CIS 660/Assign 2/count.csv")
-
-
-words = word_count.drop(columns=['data','mining'])
-
-print(words)
-print(words.columns)
-
-
-# Normalize the data attributes for the Iris dataset.
-
-normalized_X = preprocessing.normalize(words)
-
-print(normalized_X)
-
-
-print(normalized_X[1,:])
-
-for i in range(5):
-    for j in range(5):
-
-        num = normalized_X[i, :]
-        den = normalized_X[j, :]
-
-        cosine(num,den)
-
-
+    for i in range(5):
+        for j in range(5):
+            num = normalized_X[i, :]
+            den = normalized_X[j, :]
+            cosine(num,den)
