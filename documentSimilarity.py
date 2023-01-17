@@ -5,7 +5,8 @@ import urllib.request
 from math import *
 from sklearn import preprocessing
 import math
-import numpy
+import mypy
+
 i,j=1,0;
 n=[]
 fullcontnt=[]
