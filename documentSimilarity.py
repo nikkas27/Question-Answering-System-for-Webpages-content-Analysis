@@ -6,6 +6,10 @@ from math import *
 from sklearn import preprocessing
 import math
 import numpy
+
+x=0
+y=0
+
 i,j=1,0;
 n=[]
 fullcontnt=[]
