@@ -8,6 +8,8 @@ import math
 import numpy
 import requests2
 
+x=0
+
 i,j=1,0;
 n=[]
 fullcontnt=[]
