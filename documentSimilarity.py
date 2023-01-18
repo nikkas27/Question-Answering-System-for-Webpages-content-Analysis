@@ -7,6 +7,8 @@ from sklearn import preprocessing
 import math
 import mypy
 import typing
+import requests
+import matplotlib
 
 i,j=1,0;
 n=[]
